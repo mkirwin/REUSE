@@ -1,0 +1,16 @@
+/* adder.jj: Adding up numbers */
+
+options {
+    STATIC = false;
+}
+PARSER_BEGIN(Adder)
+
+import java.util.*;
+
+    class Adder {
+        static void main(String[] args) throws ParseException, TokenMsgError {
+            Adder parser = new Adder(System.in);
+            parser.Start();
+        }
+    }
+PARSER_END(Adder)

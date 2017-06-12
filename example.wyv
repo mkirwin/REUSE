@@ -1,0 +1,89 @@
+// Simple Messaging Architecture (two participants, each can send/receive)
+ 
+component Client
+	port getMsg : ClientIface	// [receive]
+	port sendMsg : ClientIface	// [send]
+ 
+component Server
+	port sendInfo : ServerIface	// [send info]
+	port getInfo : ServerIface	// [receive requests]
+ 
+connector HTTPCtr // Probably need a better name
+	role client1 : ClientIface
+	role client2 : ClientIface
+	val host: IPAddress
+	val port: Int
+ 
+architecture
+	components
+		component Client clientA
+		component Client clientB
+		component Server server
+	connectors 
+		connector HTTPCtr httpCtr // Not sure if this is right (HTTP and TCP?)
+	attachments
+		// How to specify an arbitrary number of clients?
+		// Even for this example, need to have different send/getInfo ports for Server connections.
+		connect clientA.getMsg to server.sendInfo with httpCtr
+		connect clientA.sendMsg to server.getInfo with httpCtr
+		connect clientB.getMsg to server.sendInfo with httpCtr
+		connect clientB.sendMsg to server.getInfo with httpCtr
+
+// ======================================================================= //
+
+// Client Interface
+resource type ClientIface
+	requires def sharedFxn() // equivalent to Selva's getInfo fn?
+
+module def Client(sendMsg: ClientIface) : Client
+
+// Server Interface
+resource type ServerIface
+	provides def sharedFxn() // = Selva's getInfo fn?
+
+module Server
+	def conversionFxn() // Need types
+
+// ======================================================================= //
+// Generated Code
+// Citation: http://www.javaworld.com/article/2077322/core-java/core-java-sockets-programming-in-java-a-tutorial.html
+
+
+// Each of these methods establishes an in/output stream for communication with the other component. This probably shouldn't be done every time there is a correspondence. 
+module def sendMsg(tcpClient : TCPClientModule) : ClientIface
+	def sendMsg(toAddress:Int, msg:String) : Boolean
+		// Create an output stream to send information to the server socket
+		DataOutputStream clientOutput = new DataOutputStream(thisClient.getOutputStream());
+		// write from string to bytes
+		clientOutput.writeBytes(msg);
+		// MAYBE return boolean or whatever return type
+
+module def getMsg() : ClientIface
+	def getMsg()
+		// Create an input stream to receive response from the server
+		DataInputStream clientInput = new DataInputStream(thisClient.getInputStream());
+		
+
+module def getInfo()
+	def getInfo()
+		// Use DataInputStream to receive input from the client
+		DataInputSream serverInput = new DataInputStream(serviceSocket.getInputStream());
+
+module def sendInfo() : ClientIface
+	def sendInfo(toAddress:Int, data:bytes) : Boolean
+		DataOutputStream serverOutput = new DataOutputStream(serviceSocket.get OutputStream());
+		clientOutput.writeBytes(data);
+
+
+// Code Generated from attachments
+
+//  ===Client===
+// instantiate a TCP client module
+// getInfo(tcpClient)
+// "start" the client
+
+
+// ===Server===
+// instantiate a TCP server module
+// sendInfo(tcpServer)
+// "use" the tcp server or call "serve"
