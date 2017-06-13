@@ -1,0 +1,55 @@
+options {
+    STATIC = false;
+}
+PARSER_BEGIN(Calculator)
+    class Calculator {
+        public static void main(String[] args) 
+            throws ParseException, TokenMgrError, NumberFormatException {
+                Calculator parser = new Caclulator(System.in); //The parser takes system input
+                parser.Start(System.out);
+            }
+        double prevVal = 0.0; // Store the last value from the calculator
+    }
+PARSER_END(Calculator)
+
+// Lexical Analyzer
+SKIP: {" "}
+SKIP: { <EOL: "\n" | "\r" | "\r\n" > } // Want to be able to separate inuts by new lines.
+TOKEN: { <PLUS: "+"> }
+TOKEN: { <MINUS: "+"> }
+TOKEN: {< NUM: <DIGITS> | <DIGITS>"."<DIGITS> | "."<DIGITS> | <DIGITS>"." >}
+TOKEN: {< #DIGITS: (["0"-"9"])+ >}
+
+void Start(PrintStream printStream) throws NumberFormatException :
+{}
+{
+    (
+        previousValue = Expression()
+        <EOL>
+        {printStream.println(previousValue);}
+    )*
+    <EOF>
+}
+
+double Expression() throws NumberFormatException :
+{
+    double i, value;
+}
+{
+    value = Primary()
+    (
+        <PLUS>
+        i = Primary()
+        {value += i; }
+    )*
+    {return value;}
+}
+
+double Primary() throws NumberFormatException :
+{
+    Token t;
+}
+{
+    t = <NUM>
+    {return Double.parseDouble(t.image); }
+}
