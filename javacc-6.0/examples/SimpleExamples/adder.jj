@@ -1,0 +1,46 @@
+options {
+    STATIC = false;
+}
+PARSER_BEGIN(Adder)
+    class Adder {
+        public static void main(String[] args) throws ParseException, TokenMgrError, NumberFormatException {
+            Adder parser = new Adder(System.in);
+            int val = parser.Start();
+            System.out.println(val);
+        }
+    }
+PARSER_END(Adder)
+
+// Lexical Analyzer
+SKIP: {" "}
+SKIP: { "\n" | "\r" | "\r\n" }
+TOKEN: { <PLUS: "+">  }
+TOKEN: { <NUM: (["0"-"9"]) + > }
+
+// Specifying the Parser
+// Specifies legitimate sequences of token kinds.
+int Start() throws NumberFormatException : {
+    Token t;
+    int i;
+    int value;
+}
+{
+    value = Primary()
+    (
+        <PLUS>
+        i = Primary()
+        {value += i; }
+    )*
+    <EOF>
+    { return value; }
+}
+
+int Primary() throws ParseException, NumberFormatException : {
+    Token t;
+    int i;
+}
+{
+    t = <NUM>
+    {i = Integer.parseInt(t.image);}
+    {return i; }
+}
