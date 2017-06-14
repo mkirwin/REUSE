@@ -1,0 +1,217 @@
+/*
+sions. The grammar supports the plus (+), minus (-)
+ * multiply (*), and divide (/) operations.
+ */
+options {
+     LOOKAHEAD=1; }
+     PARSER_BEGIN(Calc1i)
+    public class Calc1i {
+
+            // The next two declarations are for global variables, usable in
+            //any production
+            static int total;  // Total value
+                
+                static java.util.Stack argStack = new java.util.Stack(); 
+                        // evaluation stack
+                 
+                    public static void main(String args[]) throws ParseException {
+
+                            Calc1i parser = new Calc1i(System.in);
+                                while (true) {
+
+                                            System.out.print("Enter Expression: ");
+                                                    System.out.flush();
+                                                            try {
+                                                                 switch (parser.one_line()){
+                                                                     //call to grammar start symbol
+                                                                                   case -1: System.exit(0);
+                                                                                                          case 0: break;
+                                                                                                                                case 1:  // result is stored on top of stack
+                                                                                                                                  int x = ((Integer) argStack.pop()).intValue();
+                                                                                                                                                  System.out.println("Total = " + x);
+                                                                                                                                                                  break;
+                                                                                                                                                                            }
+                                                                         } catch (ParseException x) {
+
+                                                                                     System.out.println("Exiting."); throw x;
+                                                                                             }
+                                                                } }
+    }
+PARSER_END(Calc1i)
+    SKIP :
+{
+     " " |    "\r" |    "\t" }
+        // Tokens (terminals) are defined by regular expressions
+TOKEN : {
+             < EOL: "\n" > }
+TOKEN : /* OPERATORS */
+{
+          < PLUS: "+" >
+                |    < MINUS: "-" >
+                  |    < MULTIPLY: "*" >
+                    |    < DIVIDE: "/" >
+}
+ 
+TOKEN :
+{
+             < CONSTANT: ( <DIGIT> )+ >
+                 |   < #DIGIT: ["0" - "9"] >    // # begins internal definition
+                                                // (used in rule itself)
+}
+ 
+int one_line() :
+{
+}
+{
+        sum() <EOL> {
+             return 1; }
+          |  <EOL> {
+               return 0; }
+            |  <EOF> {
+                 return -1; }
+}
+ 
+void sum() ://Production rule: sum ->term ((*|+)term)*)
+{
+    Token x;}  // local variable to store token which was matched
+{
+     term()( 
+                     ( x = <PLUS> | x = <MINUS> ) term()
+                             {
+
+                                       int a = ((Integer) argStack.pop()).intValue();
+                                                 int b = ((Integer) argStack.pop()).intValue();
+                                                           if ( x.kind == PLUS )  // query local variable for type
+                                                                        argStack.push(new Integer(b + a));
+                                                                                  else
+                                                                                               argStack.push(new Integer(b - a));
+                                                                                                       }
+                                                                                                               )*
+}
+ 
+void term() :
+{
+    Token x;}
+{
+     unary() ( 
+                       ( x = <MULTIPLY> | x = <DIVIDE> ) unary()
+                                  {
+                                      int a = ((Integer) argStack.pop()).intValue();
+                                                      int b = ((Integer) argStack.pop()).intValue();
+                                                                      if ( x.kind == MULTIPLY )
+                                                                                         argStack.push(new Integer(b * a));
+                                                                                                         else
+                                                                                                                            argStack.push(new Integer(b / a));
+                                                                                                                                       }
+                                                                                                                                                 )*
+}
+ 
+void unary() :
+{
+}
+{
+     <MINUS> element()
+             {
+                    int a = ((Integer) argStack.pop()).intValue();
+                            argStack.push(new Integer(- a));
+                                }
+         | element()  
+                      // no need to place value on stack as element() has already
+}
+ 
+void element() :
+{
+}
+{
+       <CONSTANT>
+               {
+                      try {
+                          int x = Integer.parseInt(token.image);
+                                         // token.image contains actual value matched by CONSTANT
+                                      argStack.push(new Integer(x));
+                                              } catch (NumberFormatException ee) {
+
+                                                          argStack.push(new Integer(0));}
+                          }
+           |  "(" sum() ")"
+}
+}
+                                              }
+                      }
+               }
+}
+}
+             }
+}
+}
+                                  }
+}
+}
+                             }
+}
+}
+            }
+          }
+        }
+}
+}
+}
+}
+        }
+}
+                                                                         }
+                                                                 }
+                                                            }
+                                }
+                    }
+    }
+}ARSER_BEGIN(Exp)RSER_BEGIN(Exp)
+    public class Exp {
+
+        public static void main(String args[]) throws ParseException {
+
+            Exp parser = new Exp(System.in);
+            parser.ExpressionList();   
+            // Notice this calls the start symbol for the grammar
+        }
+    }
+
+PARSER_END(Exp)
+    SKIP :
+{
+    " " | "\t" | "\n" | "\r" }
+
+TOKEN :
+{
+    < ID: ["a"-"z","A"-"Z"] ( ["a"-"z","A"-"Z","0"-"9"] )* >
+        | < NUM: ( ["0"-"9"] )+ >
+}
+
+void ExpressionList() :
+{
+    String s; }
+{
+    {
+        System.out.println(
+                "Please type in an expression followed by a \";\" or ^D to quit:");
+        System.out.println(""); }
+    ( Expression() ";" )* <EOF>
+}
+
+void Expression() :
+{
+}
+{
+    Term() ( "+" Term() )* }
+
+    void Term() :
+{
+}
+{
+    Factor() ( "*" Factor() )* }
+
+    void Factor() :
+{
+    Token t; String s; }
+{
+    t=<ID>
