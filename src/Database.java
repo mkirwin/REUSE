@@ -126,8 +126,19 @@ public class Database {
         } catch (Exception e) { System.out.println(e); }
     }
 
-    public void drop() {
+    public void dropTable(String col, String table) {
+        try {
 
+            // Our SQL drop query
+            String query = "ALTER TABLE " + table + " DROP " + col;
+
+            // Create java statement
+            PreparedStatement preparedStatement = con.prepareStatement(query); // maybe just statement?
+
+            // Execute statement
+            preparedStatement.execute();
+
+        } catch (Exception e) { System.out.println(e); }
     }
 
     public static void main(String[] args) {
@@ -138,6 +149,7 @@ public class Database {
         db.insert("(name, owner, birth)","('lena', 'muffin iii', '2015-01-03')", "cats");
         db.createTable("dogs", "id INT unsigned NOT NULL AUTO_INCREMENT, name VARCHAR(150) NOT " +
                 "NULL, PRIMARY KEY (id)");
+        db.dropTable("name", "dogs");
         db.disconnect();
         db.select("*", "cats"); // Test to make sure connection is closed.
     }
