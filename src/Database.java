@@ -44,12 +44,20 @@ public class Database {
         } catch (Exception e) { System.out.println(e); }
     }
 
+    /**
+     * Disconnect from the database.
+     */
     public void disconnect() {
         try {
             con.close();
         } catch (Exception e) { System.out.println(e); }
     }
 
+    /**
+     * Create a new table in the database.
+     * @param tableName
+     * @param tableContents
+     */
     public void createTable(String tableName, String tableContents) { // Should this include parens?
         try {
             // Our SQL create (table) query
@@ -65,7 +73,7 @@ public class Database {
     }
 
     /**
-     * Select a working table
+     * Select a working table.
      * @param arg
      * @param table
      */
@@ -89,12 +97,18 @@ public class Database {
             */
 
             statement.close();
-            System.out.println("Successfully disconnected from " + DBName);
+            System.out.println("Successfully disconnected from " + DBName + ".");
             this.DBName = "";
 
         } catch (Exception e) { System.out.println(e); }
     }
 
+    /**
+     * Insert an entry into a table.
+     * @param format
+     * @param values
+     * @param table
+     */
     public void insert(String format, String values, String table) {
         try {
 
@@ -111,6 +125,11 @@ public class Database {
 
     }
 
+    /**
+     * Delete a specified column in a table.
+     * @param arg
+     * @param table
+     */
     public void delete(String arg, String table) { // example arg: "name='muffin' "
         try {
 
@@ -126,6 +145,11 @@ public class Database {
         } catch (Exception e) { System.out.println(e); }
     }
 
+    /**
+     * BAD NAME: Drop a column in the table (can make drop table function).
+     * @param col
+     * @param table
+     */
     public void dropTable(String col, String table) {
         try {
 
@@ -141,6 +165,7 @@ public class Database {
         } catch (Exception e) { System.out.println(e); }
     }
 
+    /*
     public static void main(String[] args) {
         Database db = new Database("pets", "root", "");
         db.connect();
@@ -153,4 +178,5 @@ public class Database {
         db.disconnect();
         db.select("*", "cats"); // Test to make sure connection is closed.
     }
+    */
 }
