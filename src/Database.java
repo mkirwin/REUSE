@@ -67,11 +67,12 @@ public class Database {
 
     /**
      * Create a new table in the database.
+     * TODO: Use an array for table contents and table name
      *
      * @param tableName
      * @param tableContents
      */
-    public void createTable(Connection con, String tableName, String tableContents) { // Should this include parens?
+    public void createTable(Connection con, String tableName, String tableContents) {
         try {
             // Our SQL create (table) query
             String query = "CREATE TABLE " + tableName + "(" + tableContents + ");";
@@ -92,17 +93,18 @@ public class Database {
 
     /**
      * Select a working table.
+     * TODO: Use prepared statement; Don't use string for the table
      *
      * @param arg
      * @param table
      */
-    public void select(Connection con, String arg, String table) { // Check what these should be called.
+    public void select(Connection con, String arg, String table) {
         try {
             // Our SQL select query
             String query = "SELECT " + arg + " FROM " + table;
 
             // Create java statement
-            Statement statement = con.createStatement();
+            PreparedStatement statement = con.prepareStatement(query);
 
             // Execute query and get ResultSet
             ResultSet result = statement.executeQuery(query);
@@ -117,6 +119,7 @@ public class Database {
 
     /**
      * Insert an entry into a table.
+     * TODO: Don't use strings for arguments
      * @param format
      * @param values
      * @param table
@@ -139,8 +142,13 @@ public class Database {
 
     }
 
+    public void update(Connection con, String table, String contents) {
+
+    }
+
     /**
      * Delete a specified column in a table.
+     * TODO: Don't use strings for the arguments
      * @param arg
      * @param table
      */
@@ -164,6 +172,7 @@ public class Database {
 
     /**
      * BAD NAME: Drop a column in the table (can make drop table function).
+     * TODO: Don't use strings for the arguments
      * @param col
      * @param table
      */
@@ -188,6 +197,7 @@ public class Database {
     public static void main(String[] args) {
         Database db = new Database();
         Connection con = db.connect("jdbc:mysql://localhost:3306/pets", "root", "");
+        db.createTable(con, "doggies", "name VARCHAR(50)");
         db.disconnect(con);
         /*
         db.select("*", "cats");
