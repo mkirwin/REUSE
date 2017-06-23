@@ -1,14 +1,19 @@
+package wyvern.stdlib.support;
+
 import java.sql.*;
 
 public class Database {
 
-    public Database(String DBName, String user, String password) {
-        this.DBName = DBName;
+    public Database() {
+    }
+
+    public Database(String connectionStr, String user, String password) {
+        this.connectionStr = connectionStr;
         this.user = user;
         this.password = password;
     }
-    private String DBName, user, password;
-    Connection con;
+
+    private String connectionStr, user, password;
 
     /**
      * TODO: Implement basic functions
@@ -21,44 +26,52 @@ public class Database {
      * - repeated code.
      */
 
-     /**
+    /**
      * Connect to a database
      */
-    public void connect() {
+
+    // should this return a connection?
+    public Connection connect(String connectionStr, String user, String password) {
         try {
+            // Establish connection with DB
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection
-                    ("jdbc:mysql://localhost:3306/" + DBName, user, password); // Whole URL string, instead?
-            this.con = con;
+            Connection con = DriverManager.getConnection(connectionStr, user, password);
 
-            // Perhaps this should be on a different level, for error messages.
-            System.out.println("Connected to database " + DBName + " successfully.");
+            // Print success message
+            System.out.println("Connected to database successfully."); // no longer has DB specific message
 
-            /*
-            Statement statement = con.createStatement();
-            ResultSet res = statement.executeQuery("select * from cats"); // Specify in action.
-            while(res.next())
-                System.out.println(res.getInt(1)+"  "+res.getString(2)+"  "+res.getString(3) + " " +res.getString(4));
-            con.close();
-            */
-        } catch (Exception e) { System.out.println(e); }
+            // Return established connection
+            return con;
+
+        } catch (Exception e) {
+            System.out.println(e);
+            return null; // Should a failed connect return something else?
+        }
     }
 
     /**
      * Disconnect from the database.
      */
-    public void disconnect() {
+    public void disconnect(Connection con) {
         try {
+            // Close connection
             con.close();
-        } catch (Exception e) { System.out.println(e); }
+
+            // Print success message
+            System.out.println("Disconnected from database successfully.");
+
+        } catch (Exception e) {
+            System.out.println(e);
+        }
     }
 
     /**
      * Create a new table in the database.
+     *
      * @param tableName
      * @param tableContents
      */
-    public void createTable(String tableName, String tableContents) { // Should this include parens?
+    public void createTable(Connection con, String tableName, String tableContents) { // Should this include parens?
         try {
             // Our SQL create (table) query
             String query = "CREATE TABLE " + tableName + "(" + tableContents + ");";
@@ -66,20 +79,25 @@ public class Database {
             // Create java statement
             PreparedStatement statement = con.prepareStatement(query);
 
-            // execute statement
+            // Execute statement
             statement.execute();
 
-        } catch (Exception e) { System.out.println(e); }
+            // Close statement
+            statement.close();
+
+        } catch (Exception e) {
+            System.out.println(e);
+        }
     }
 
     /**
      * Select a working table.
+     *
      * @param arg
      * @param table
      */
-    public void select(String arg, String table) { // Check what these should be called.
+    public void select(Connection con, String arg, String table) { // Check what these should be called.
         try {
-
             // Our SQL select query
             String query = "SELECT " + arg + " FROM " + table;
 
@@ -89,18 +107,12 @@ public class Database {
             // Execute query and get ResultSet
             ResultSet result = statement.executeQuery(query);
 
-            /* doing stuff here:
-            while (result.next()) {
-                int id = result.getInt("id");
-                System.out.println("ID #" + id); // Print out ID numbers for each table entry
-            }
-            */
-
+            // Close statement
             statement.close();
-            System.out.println("Successfully disconnected from " + DBName + ".");
-            this.DBName = "";
 
-        } catch (Exception e) { System.out.println(e); }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
     }
 
     /**
@@ -109,9 +121,8 @@ public class Database {
      * @param values
      * @param table
      */
-    public void insert(String format, String values, String table) {
+    public void insert(Connection con, String format, String values, String table) {
         try {
-
             // Our SQL insert query
             String query = "INSERT INTO " + table + " " + format + " VALUES " + values;
 
@@ -120,6 +131,9 @@ public class Database {
 
             // Execute query
             preparedStatement.execute();
+
+            // Close statement
+            preparedStatement.close();
 
         } catch (Exception e) { System.out.println(e);}
 
@@ -130,7 +144,7 @@ public class Database {
      * @param arg
      * @param table
      */
-    public void delete(String arg, String table) { // example arg: "name='muffin' "
+    public void delete(Connection con, String arg, String table) { // example arg: "name='muffin' "
         try {
 
             // Our SQL delete query
@@ -142,6 +156,9 @@ public class Database {
             // Execute statement
             preparedStatement.execute();
 
+            // Close statement
+            preparedStatement.close();
+
         } catch (Exception e) { System.out.println(e); }
     }
 
@@ -150,7 +167,7 @@ public class Database {
      * @param col
      * @param table
      */
-    public void dropTable(String col, String table) {
+    public void dropTable(Connection con, String col, String table) {
         try {
 
             // Our SQL drop query
@@ -162,13 +179,17 @@ public class Database {
             // Execute statement
             preparedStatement.execute();
 
+            // Close statement
+            preparedStatement.close();
+
         } catch (Exception e) { System.out.println(e); }
     }
 
-    /*
     public static void main(String[] args) {
-        Database db = new Database("pets", "root", "");
-        db.connect();
+        Database db = new Database();
+        Connection con = db.connect("jdbc:mysql://localhost:3306/pets", "root", "");
+        db.disconnect(con);
+        /*
         db.select("*", "cats");
         db.delete("name='lena'", "cats");
         db.insert("(name, owner, birth)","('lena', 'muffin iii', '2015-01-03')", "cats");
@@ -177,6 +198,6 @@ public class Database {
         db.dropTable("name", "dogs");
         db.disconnect();
         db.select("*", "cats"); // Test to make sure connection is closed.
+        */
     }
-    */
 }
