@@ -6,7 +6,7 @@ import java.io.*;
  */
 public class SimpleClient {
     public static void main(String[] args) throws IOException {
-        System.out.println("Asshole has made it to client");
+        System.out.println("Program has made it to client");
         // Open your connection to a server, at port 1254
         Socket s1 = new Socket("localhost", 1254);
         // Get an input file handle from the socket and read the input
