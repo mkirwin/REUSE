@@ -14,7 +14,7 @@ public class SimpleServer {
         OutputStream s1out = s1.getOutputStream();
         DataOutputStream dos = new DataOutputStream(s1out);
         // Send a string!
-        dos.writeUTF("THIS IS SERVER ASSHOLEY\n");
+        dos.writeUTF("THIS IS A SERVER\n");
         // Close the connection but not the server socket
         dos.close();
         s1out.close();
