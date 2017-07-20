@@ -1,0 +1,86 @@
+\select@language {english}
+\contentsline {chapter}{\numberline {1}Introduction.}{5}{chapter.1}
+\contentsline {section}{\numberline {1.1}Copper in a nutshell.}{5}{section.1.1}
+\contentsline {section}{\numberline {1.2}Example specification.}{5}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Overview of manual.}{6}{subsection.1.2.1}
+\contentsline {chapter}{\numberline {2}Copper's parsing algorithms.}{9}{chapter.2}
+\contentsline {section}{\numberline {2.1}Context-aware scanning.}{9}{section.2.1}
+\contentsline {section}{\numberline {2.2}Specification of whitespace and other layout.}{9}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Layout in traditional tools.}{9}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}How Copper handles layout.}{10}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}How to specify layout in Copper.}{10}{subsection.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.3.1}Grammar layout.}{10}{subsubsection.2.2.3.1}
+\contentsline {subsubsection}{\numberline {2.2.3.2}Layout per production.}{10}{subsubsection.2.2.3.2}
+\contentsline {section}{\numberline {2.3}Lexical precedence paradigm.}{11}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Dominate/submit-lists.}{11}{subsection.2.3.1}
+\contentsline {paragraph}{N.B.:}{12}{section*.2}
+\contentsline {paragraph}{N.B.:}{12}{section*.3}
+\contentsline {subsection}{\numberline {2.3.2}Disambiguation functions/groups.}{12}{subsection.2.3.2}
+\contentsline {paragraph}{N.B.:}{12}{section*.4}
+\contentsline {section}{\numberline {2.4}Transparent prefixes.}{13}{section.2.4}
+\contentsline {paragraph}{N.B.:}{13}{section*.5}
+\contentsline {chapter}{\numberline {3}The CUP skin.}{14}{chapter.3}
+\contentsline {section}{\numberline {3.1}Comments and whitespace.}{14}{section.3.1}
+\contentsline {paragraph}{N.B.:}{14}{section*.6}
+\contentsline {section}{\numberline {3.2}Preamble.}{14}{section.3.2}
+\contentsline {section}{\numberline {3.3}Parser name.}{14}{section.3.3}
+\contentsline {section}{\numberline {3.4}Lexical syntax blocks.}{14}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Terminal class declarations.}{15}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Terminal declarations.}{15}{subsection.3.4.2}
+\contentsline {paragraph}{N.B.:}{15}{section*.7}
+\contentsline {subsubsection}{\numberline {3.4.2.1}Semantic actions on terminals.}{16}{subsubsection.3.4.2.1}
+\contentsline {paragraph}{Example.}{16}{section*.8}
+\contentsline {subsection}{\numberline {3.4.3}Disambiguation functions/groups.}{16}{subsection.3.4.3}
+\contentsline {paragraph}{Example.}{17}{section*.9}
+\contentsline {section}{\numberline {3.5}Context-free syntax blocks.}{17}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Nonterminal/start-symbol declarations.}{18}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Operator precedence/associativity declarations.}{18}{subsection.3.5.2}
+\contentsline {subsection}{\numberline {3.5.3}Production declarations.}{19}{subsection.3.5.3}
+\contentsline {subsubsection}{\numberline {3.5.3.1}Semantic actions.}{19}{subsubsection.3.5.3.1}
+\contentsline {section}{\numberline {3.6}User code blocks.}{20}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}Auxiliary.}{20}{subsection.3.6.1}
+\contentsline {subsection}{\numberline {3.6.2}Initialization.}{20}{subsection.3.6.2}
+\contentsline {section}{\numberline {3.7}Parser attributes.}{20}{section.3.7}
+\contentsline {chapter}{\numberline {4}Running Copper.}{21}{chapter.4}
+\contentsline {section}{\numberline {4.1}Requirements.}{21}{section.4.1}
+\contentsline {section}{\numberline {4.2}Command-line interface.}{21}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Quick-start.}{21}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Switches.}{22}{subsection.4.2.2}
+\contentsline {subsubsection}{\numberline {4.2.2.1}\texttt {-?}.}{22}{subsubsection.4.2.2.1}
+\contentsline {subsubsection}{\numberline {4.2.2.2}\texttt {-version}.}{22}{subsubsection.4.2.2.2}
+\contentsline {subsubsection}{\numberline {4.2.2.3}\texttt {-package}.}{22}{subsubsection.4.2.2.3}
+\contentsline {paragraph}{N.B.:}{22}{section*.10}
+\contentsline {subsubsection}{\numberline {4.2.2.4}\texttt {-parser}.}{22}{subsubsection.4.2.2.4}
+\contentsline {subsubsection}{\numberline {4.2.2.5}\texttt {-o}.}{22}{subsubsection.4.2.2.5}
+\contentsline {subsubsection}{\numberline {4.2.2.6}\texttt {-q} , \texttt {-v}, and \texttt {-vv}.}{22}{subsubsection.4.2.2.6}
+\contentsline {subsubsection}{\numberline {4.2.2.7}\texttt {-mda}.}{23}{subsubsection.4.2.2.7}
+\contentsline {subsubsection}{\numberline {4.2.2.8}\texttt {-logfile}.}{23}{subsubsection.4.2.2.8}
+\contentsline {subsubsection}{\numberline {4.2.2.9}\texttt {-dump}, \texttt {-errordump}, \texttt {-dumpfile}, \texttt {-dumptype}.}{23}{subsubsection.4.2.2.9}
+\contentsline {subsubsection}{\numberline {4.2.2.10}\texttt {-pipeline}.}{23}{subsubsection.4.2.2.10}
+\contentsline {subsubsection}{\numberline {4.2.2.11}\texttt {-skin}, \texttt {-engine}.}{24}{subsubsection.4.2.2.11}
+\contentsline {section}{\numberline {4.3}Copper ANT task and API.}{24}{section.4.3}
+\contentsline {section}{\numberline {4.4}Format of the Copper grammar dump.}{24}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Text dump.}{24}{subsection.4.4.1}
+\contentsline {subsubsection}{\numberline {4.4.1.1}Terminals, nonterminals, productions, LALR(1) DFA.}{24}{subsubsection.4.4.1.1}
+\contentsline {subsubsection}{\numberline {4.4.1.2}Lexical precedence graph.}{24}{subsubsection.4.4.1.2}
+\contentsline {subsubsection}{\numberline {4.4.1.3}Disambiguation functions/groups.}{25}{subsubsection.4.4.1.3}
+\contentsline {subsubsection}{\numberline {4.4.1.4}Parse table.}{25}{subsubsection.4.4.1.4}
+\contentsline {subsection}{\numberline {4.4.2}HTML dump.}{25}{subsection.4.4.2}
+\contentsline {section}{\numberline {4.5}Grammar troubleshooting.}{25}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Heap overflow.}{25}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}{}``Cyclic precedence relation involving terminals ...''}{26}{subsection.4.5.2}
+\contentsline {subsection}{\numberline {4.5.3}Parse table conflict.}{26}{subsection.4.5.3}
+\contentsline {subsection}{\numberline {4.5.4}Lexical ambiguity.}{26}{subsection.4.5.4}
+\contentsline {chapter}{\numberline {5}Running a Copper parser.}{27}{chapter.5}
+\contentsline {section}{\numberline {5.1}Requirements.}{27}{section.5.1}
+\contentsline {section}{\numberline {5.2}Constructors.}{27}{section.5.2}
+\contentsline {section}{\numberline {5.3}\texttt {parse()} methods.}{27}{section.5.3}
+\contentsline {section}{\numberline {5.4}The class \texttt {RunParser}.}{28}{section.5.4}
+\contentsline {chapter}{\numberline {A}CUP skin grammar.}{29}{appendix.A}
+\contentsline {section}{\numberline {A.1}Lexical syntax.}{29}{section.A.1}
+\contentsline {section}{\numberline {A.2}Context-free syntax.}{29}{section.A.2}
+\contentsline {subsection}{\numberline {A.2.1}Specification syntax.}{29}{subsection.A.2.1}
+\contentsline {subsection}{\numberline {A.2.2}Regex bridge syntax.}{32}{subsection.A.2.2}
+\contentsline {subsection}{\numberline {A.2.3}Regex syntax.}{32}{subsection.A.2.3}
+\contentsline {chapter}{\numberline {B}{}``Mini-Java'' example specification.}{34}{appendix.B}
+\contentsline {chapter}{\numberline {C}License.}{39}{appendix.C}

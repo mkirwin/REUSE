@@ -1,0 +1,641 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  7 JUL 2017 10:42
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**"Copper User Manual.tex"
+(./Copper User Manual.tex
+LaTeX2e <2016/03/31>
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/times.sty
+Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2015/03/17 v1.2c Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/latin1.def
+File: latin1.def 2015/03/17 v1.2c Input encoding file
+))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
+)
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/local/texlive/2016/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count88
+\Gm@cntv=\count89
+\c@Gm@tempcnt=\count90
+\Gm@bindingoffset=\dimen103
+\Gm@wd@mp=\dimen104
+\Gm@odd@mp=\dimen105
+\Gm@even@mp=\dimen106
+\Gm@layoutwidth=\dimen107
+\Gm@layoutheight=\dimen108
+\Gm@layouthoffset=\dimen109
+\Gm@layoutvoffset=\dimen110
+\Gm@dimlist=\toks17
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count91
+\float@exts=\toks18
+\float@box=\box26
+\@float@everytoks=\toks19
+\@floatcapt=\box27
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2016/05/09 v1.1c Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 144.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count92
+))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2016/05/05 v6.83n Hypertext links for LaTeX
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package hobsub Info: Skipping package `ifvtex' (already loaded).
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+Package: pdftexcmds 2016/05/10 v0.21 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+)
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2016/05/16 v1.17 At begin shipout hook (HO)
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+)
+\@linkdim=\dimen111
+\Hy@linkcounter=\count93
+\Hy@pagecounter=\count94
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2016/05/05 v6.83n Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count95
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 4322.
+Package hyperref Info: Hyper figures OFF on input line 4446.
+Package hyperref Info: Link nesting OFF on input line 4451.
+Package hyperref Info: Hyper index ON on input line 4454.
+Package hyperref Info: Plain pages OFF on input line 4461.
+Package hyperref Info: Backreferencing OFF on input line 4466.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4691.
+\c@Hy@tempcnt=\count96
+LaTeX Info: Redefining \url on input line 5044.
+\XeTeXLinkMargin=\dimen112
+\Fld@menulength=\count97
+\Field@Width=\dimen113
+\Fld@charsize=\dimen114
+Package hyperref Info: Hyper figures OFF on input line 6298.
+Package hyperref Info: Link nesting OFF on input line 6303.
+Package hyperref Info: Hyper index ON on input line 6306.
+Package hyperref Info: backreferencing OFF on input line 6313.
+Package hyperref Info: Link coloring ON on input line 6316.
+Package hyperref Info: Link coloring with OCG OFF on input line 6323.
+Package hyperref Info: PDF/A mode OFF on input line 6328.
+LaTeX Info: Redefining \ref on input line 6368.
+LaTeX Info: Redefining \pageref on input line 6372.
+\Hy@abspage=\count98
+\c@Item=\count99
+\c@Hfootnote=\count100
+)
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2016/05/05 v6.83n Hyperref driver for pdfTeX
+\Fld@listcount=\count101
+\c@bookmark@seq@number=\count102
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip43
+)
+\@float@every@algorithm=\toks20
+\c@algorithm=\count103
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2016/04/23 3.9r The Babel package
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2012/08/20 v3.3p English support from the babel system
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2016/04/23 3.9r Babel common definitions
+\babel@savecnt=\count104
+\U@D=\dimen115
+)
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+))
+(./Copper User Manual.aux)
+\openout1 = `"Copper User Manual.aux"'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 41.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/t1ptm.fd
+File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
+)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+
+Package geometry Warning: The marginal notes overrun the paper.
+     Add 14.6625pt and more to the right margin.
+
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: letterpaper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(90.3375pt, 433.62001pt, 90.3375pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=433.62001pt
+* \textheight=650.43001pt
+* \oddsidemargin=18.0675pt
+* \evensidemargin=18.0675pt
+* \topmargin=0.0pt
+* \headheight=0.0pt
+* \headsep=0.0pt
+* \topskip=12.0pt
+* \footskip=36.135pt
+* \marginparwidth=95.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count105
+\scratchdimen=\dimen116
+\scratchbox=\box28
+\nofMPsegments=\count106
+\nofMParguments=\count107
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count108
+\MPscratchDim=\dimen117
+\MPnumerator=\count109
+\makeMPintoPDFobject=\count110
+\everyMPtoPDFconversion=\toks22
+)
+\AtBeginShipoutBox=\box29
+Package hyperref Info: Link coloring ON on input line 41.
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+)
+\c@section@level=\count111
+)
+LaTeX Info: Redefining \ref on input line 41.
+LaTeX Info: Redefining \pageref on input line 41.
+LaTeX Info: Redefining \nameref on input line 41.
+
+(./Copper User Manual.out) (./Copper User Manual.out)
+\@outlinefile=\write3
+\openout3 = `"Copper User Manual.out"'.
+
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20.74> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 56.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 56.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 56.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 56.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+) [1
+
+{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 56.
+
+(./Copper User Manual.toc
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 3.
+ [2
+
+] [3])
+\tf@toc=\write4
+\openout4 = `"Copper User Manual.toc"'.
+
+ [4]
+Chapter 1.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 61.
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 208.
+
+Overfull \hbox (3.69173pt too wide) in paragraph at lines 295--295
+\T1/cmtt/m/n/10.95 expr:l PLUS expr:r           {: RESULT = l + r; :}  
+ []
+
+
+Overfull \hbox (3.69173pt too wide) in paragraph at lines 297--297
+[]\T1/cmtt/m/n/10.95 | expr:l BINARY_MINUS expr:r {: RESULT = l - r; :}  
+ []
+
+
+Overfull \hbox (3.69173pt too wide) in paragraph at lines 299--299
+[]\T1/cmtt/m/n/10.95 | expr:l TIMES expr:r        {: RESULT = l * r; :}  
+ []
+
+
+Overfull \hbox (3.69173pt too wide) in paragraph at lines 301--301
+[]\T1/cmtt/m/n/10.95 | expr:l DIVIDE expr:r       {: RESULT = l / r; :}  
+ []
+
+
+Overfull \hbox (9.3501pt too wide) in paragraph at lines 303--303
+[]\T1/cmtt/m/n/10.95 | UNARY_MINUS expr:e         {: RESULT = -1 * e; :}  
+ []
+
+
+LaTeX Warning: Float too large for page by 52.13838pt on input line 318.
+
+[5
+
+]
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 326.
+ [6] [7] [8]
+Chapter 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 372.
+[9
+
+] [10]
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 473.
+
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omsptm.fd
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 473.
+
+[11]
+Overfull \hbox (3.9069pt too wide) in paragraph at lines 547--551
+ []\T1/ptm/b/n/12 N.B.:[] \T1/ptm/m/n/12 The prece-dence re-la-tion cre-ated by
+ dominate- and submit-lists is \T1/ptm/m/it/12 context-insensitive\T1/ptm/m/n/1
+2 ;
+ []
+
+[12] [13]
+Chapter 3.
+[14
+
+]
+Overfull \hbox (65.75877pt too wide) in paragraph at lines 713--714
+[]\T1/cmtt/m/n/12 in ([terminal classes]), < ([submit-list]), > ([dominate-list
+]) 
+ []
+
+[15]
+Overfull \hbox (22.54433pt too wide) in paragraph at lines 811--812
+[]\T1/cmtt/m/n/12 [body of Java method returning one of term1, term2, ...] 
+ []
+
+[16]
+Overfull \hbox (4.6525pt too wide) in paragraph at lines 826--830
+ []\T1/ptm/b/n/12 Example.[] \T1/ptm/m/n/12 Con-sider once again the ex-am-ple 
+from above. As spec-i-fied there with dominate-
+ []
+
+[17] [18]
+Overfull \hbox (7.66237pt too wide) in paragraph at lines 961--962
+[]\T1/cmtt/m/n/12 /* Semantic action for [ntname] ::= RHS1
+ []
+
+[19] [20]
+Chapter 4.
+
+Overfull \hbox (20.2329pt too wide) in paragraph at lines 1081--1096
+\T1/cmtt/m/n/12 [ -package packagename ] [ -parser classname ] [ -o outputfile 
+] 
+ []
+
+
+Overfull \hbox (32.57988pt too wide) in paragraph at lines 1081--1096
+\T1/cmtt/m/n/12 ([ -dump ] | [ -errordump ]) [ -dumpfile file ] [ -dumptype typ
+e ] 
+ []
+
+
+Overfull \hbox (44.92686pt too wide) in paragraph at lines 1081--1096
+\T1/cmtt/m/n/12 [ -skin skinname ] [ -engine enginename ] [ -pipeline pipelinen
+ame ]
+ []
+
+
+Overfull \hbox (32.57988pt too wide) in paragraph at lines 1106--1107
+[]\T1/cmtt/m/n/12 java -jar [location/]CopperCompiler.jar [ -o parserfile ] spe
+cfile 
+ []
+
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <12> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 1117.
+[21
+
+] [22] [23]
+Overfull \hbox (7.4393pt too wide) in paragraph at lines 1230--1238
+\T1/ptm/m/n/12 (see the method \T1/cmtt/m/n/12 ParserCompiler.compile(ParserBea
+n,ParserCompilerParameters)
+ []
+
+[24]
+Overfull \hbox (3.0241pt too wide) in paragraph at lines 1320--1322
+\T1/ptm/m/n/12 max-i-mum heap size, at which point com-pi-la-tion will ter-mi-n
+ate with an \T1/cmtt/m/n/12 OutOfMemoryError\T1/ptm/m/n/12 .
+ []
+
+[25] [26]
+Chapter 5.
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <17.28> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 1410.
+
+Overfull \hbox (4.15588pt too wide) in paragraph at lines 1412--1416
+\T1/ptm/m/n/12 meth-ods are doc-u-mented in Cop-per's Javadoc for the in-ter-fa
+ce \T1/cmtt/m/n/12 edu.umn.cs.melt.copper.
+ []
+
+[27
+
+]
+Overfull \hbox (7.27193pt too wide) in paragraph at lines 1438--1444
+\T1/ptm/m/n/12 The Cop-per parser run-time in-cludes a runnable class \T1/cmtt/
+m/n/12 edu.umn.cs.melt.copper.runtime.
+ []
+
+
+Overfull \hbox (14.0594pt too wide) in paragraph at lines 1448--1449
+[]\T1/cmtt/m/n/12 java -classpath [location/]CopperRuntime.jar:[parser-classpat
+h] 
+ []
+
+[28]
+Appendix A.
+[29
+
+]
+Overfull \hbox (22.54433pt too wide) in paragraph at lines 1542--1543
+[]   \T1/cmtt/m/n/12 RegexRoot PrecListsOpt CodeBlockOpt TerminalFlags ';'  
+ []
+
+[30] [31] [32] [33]
+Appendix B.
+
+Overfull \hbox (34.89131pt too wide) in paragraph at lines 1776--1777
+[]\T1/cmtt/m/n/12 ignore terminal BLOCK_COMMENT ::= /\/\*([^*]|\*[^/])\*\//;  
+ []
+
+
+Overfull \hbox (10.19734pt too wide) in paragraph at lines 1786--1787
+[]\T1/cmtt/m/n/12 terminal PUBLIC ::= /public/ in (keyword), < (), > ();  
+ []
+
+
+Overfull \hbox (10.19734pt too wide) in paragraph at lines 1788--1789
+[]\T1/cmtt/m/n/12 terminal STATIC ::= /static/ in (keyword), < (), > ();  
+ []
+
+
+Overfull \hbox (10.19734pt too wide) in paragraph at lines 1794--1795
+[]\T1/cmtt/m/n/12 terminal STRING ::= /String/ in (keyword), < (), > ();  
+ []
+
+
+Overfull \hbox (22.54433pt too wide) in paragraph at lines 1796--1797
+[]\T1/cmtt/m/n/12 terminal EXTENDS ::= /extends/ in (keyword), < (), > ();  
+ []
+
+
+Overfull \hbox (10.19734pt too wide) in paragraph at lines 1798--1799
+[]\T1/cmtt/m/n/12 terminal RETURN ::= /return/ in (keyword), < (), > ();  
+ []
+
+
+Overfull \hbox (22.54433pt too wide) in paragraph at lines 1802--1803
+[]\T1/cmtt/m/n/12 terminal BOOLEAN ::= /boolean/ in (keyword), < (), > ();  
+ []
+
+
+Overfull \hbox (10.19734pt too wide) in paragraph at lines 1814--1815
+\T1/cmtt/m/n/12 terminal LENGTH ::= /length/ in (keyword), < (), > ();  
+ []
+
+[34
+
+] [35]
+Overfull \hbox (1.48888pt too wide) in paragraph at lines 1953--1954
+\T1/cmtt/m/n/12 vardecls:vlist methoddecls:mlist RBRACE  
+ []
+
+
+Overfull \hbox (35.62129pt too wide) in paragraph at lines 1981--1982
+\T1/cmtt/m/n/12 nonidtype:t ID:name SEMICOLON vardeclsandstmts:rest  
+ []
+
+
+Overfull \hbox (4.75383pt too wide) in paragraph at lines 1985--1986
+[]\T1/cmtt/m/n/12 | ID:t ID:name SEMICOLON vardeclsandstmts:rest  
+ []
+
+[36]
+Overfull \hbox (35.62129pt too wide) in paragraph at lines 1999--1999
+\T1/cmtt/m/n/12 PUBLIC:p type:t ID:name LPAREN formallist:fl RPAREN  
+ []
+
+
+Overfull \hbox (47.96828pt too wide) in paragraph at lines 2059--2060
+[]\T1/cmtt/m/n/12 | ID:var LBRACK exp:e1 RBRACK ASSIGN exp:e2 SEMICOLON  
+ []
+
+[37]
+Overfull \hbox (35.62129pt too wide) in paragraph at lines 2075--2076
+[]\T1/cmtt/m/n/12 | IF:start LPAREN exp:e RPAREN stmt:s1 ELSE stmt:s2  
+ []
+
+
+Overfull \hbox (4.75383pt too wide) in paragraph at lines 2099--2100
+[]\T1/cmtt/m/n/12 | exp:obj DOT ID:name LPAREN explist:fl RPAREN  
+ []
+
+[38]
+Appendix C.
+
+Overfull \hbox (20.80345pt too wide) in paragraph at lines 2153--2156
+[]\T1/ptm/m/n/12 Licensing in-for-ma-tion for Cop-per can be found in the files
+ \T1/cmtt/m/n/12 CREDITS.txt \T1/ptm/m/n/12 and \T1/cmtt/m/n/12 LICENSE.txt\T1/
+ptm/m/n/12 ,
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2161.
+[39
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2161.
+ (./Copper User Manual.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2161.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2161.
+
+Package rerunfilecheck Info: File `"Copper User Manual".out' has not changed.
+(rerunfilecheck)             Checksum: 4E86C608A5535B7C6928ADD46DA6E9B8;5550.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2161.
+ ) 
+Here is how much of TeX's memory you used:
+ 6324 strings out of 493014
+ 92648 string characters out of 6133351
+ 192939 words of memory out of 5000000
+ 9669 multiletter control sequences out of 15000+600000
+ 44711 words of font info for 56 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 29i,8n,28p,279b,601s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
+{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/tex
+live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texl
+ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
+ve/2016/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive
+/2016/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb></usr/local/texlive/2
+016/texmf-dist/fonts/type1/public/cm-super/sftt1440.pfb></usr/local/texlive/201
+6/texmf-dist/fonts/type1/public/cm-super/sftt1728.pfb></usr/local/texlive/2016/
+texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist
+/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/typ
+e1/urw/times/utmri8a.pfb>
+Output written on "Copper User Manual.pdf" (39 pages, 250859 bytes).
+PDF statistics:
+ 676 PDF objects out of 1000 (max. 8388607)
+ 619 compressed objects within 7 object streams
+ 133 named destinations out of 1000 (max. 500000)
+ 609 words of extra memory for PDF output out of 10000 (max. 10000000)
+
