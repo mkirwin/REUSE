@@ -1,9 +1,7 @@
-import java.io.IOException;
-
 public class Main {
 
-    public static void main(String[] args) throws IOException {
-        // SimpleServer.main(null);
-        SimpleClient.main(null);
+    public static void main(String[] args) {
+        ThreadExample babyThread = new ThreadExample();
+        new Thread(babyThread).start();
     }
 }
