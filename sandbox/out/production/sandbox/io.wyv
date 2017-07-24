@@ -1,0 +1,88 @@
+module io(java:Java)
+
+type InputStream
+    def close():Unit
+
+type OutputStream
+    def close():Unit
+
+type DataInputStream
+    def readUTF():String
+    def close():Unit
+
+type DataOutputStream
+    def writeUTF(str:String):Unit
+    def close():Unit
+
+type Socket
+    def getOutputStream():OutputStream
+    def getInputStream():InputStream
+    def close():Unit
+
+type ServerSocket
+    def accept():Socket
+
+// === Creator Functions ===
+def makeServerSocket(port:Int):ServerSocket
+    // TODO: link java function
+
+def makeSocket(severSocket:ServerSocket):Socket
+    // TODO: Does this just call accept()?
+    severSocket.accept() // Do we need a java call here?
+
+def makeeDataOutputStream(out:OutputStream):DataOutputStream
+    // TODO: link java function
+
+def makeeDataInputStream(in:InputStream):DataInputStream
+    // TODO: link java function
+
+//==================================================
+// Server Code
+require java
+import IO
+val io = IO(java)
+
+// Make a ServerSocket on port 1254
+val serverSocket =  /* TODO: ServerSocket(1254) */
+val serverSocket = io.makeeServerSocket(1254)
+
+// Wait and accept a connection
+val s1 = serverSocket.accept()
+
+// Get a communication stream asosciated with the socket
+val s1out = s1.getOutputStream()
+val dos =  /* TODO: DataOutputStream(s1out) */
+val dos = io.makeDataOutputStream(s1out)
+
+// Send a string
+dos.writeUTF("Sending a string on this server")
+
+// Close the connection but not the server socket
+dos.close()
+s1out.close()
+s1.close()
+
+//==================================================
+// Client Code
+require java
+require stdout
+import IO
+val io = IO(java)
+
+// Open a connection to a server at port 1254
+val s1 = /*TODO: new Socket("localhost", 1254) */ --> think like connection
+val s1 = io.makeSocket("localhost", 1254)
+
+// Get an input file handle from the socket and read input
+val s1in = s1.getInputStream()
+val dis = /*TODO: DataInputStream(s1in) */
+val dis = io.makeDataInputStream(s1in)
+
+// Read in from Server
+val str = dis.readUTF()
+stdout.println(str)
+
+// When done, close the connection and exit
+dis.close()
+s1in.close()
+s1.close()
