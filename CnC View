@@ -1,0 +1,149 @@
+// CnC View
+component Client
+	port getInfo: requires CSIface
+
+component Server
+	port sendInfo: provides CSIface
+
+	component RequestHandler
+		port sendInfo: provides CSIface
+		port dbIface: requires DBModule
+
+	external component DB
+		port dbIface: target DBModule
+
+	connector JDBCCtr
+		val connectionString: String
+
+	architecture
+		components
+			RequestHandler rh
+			DB db
+
+		connectors
+			JDBCCtr jdbcCtr
+
+		attachments
+			connect rh.dbIface and db.dbIface with jdbcCtr
+
+		entryPoints
+			rh: start
+
+		bindings
+			sendInfo is rh.sendInfo
+
+connector JSONCtr
+	val host: IPAddress
+	val port: Int
+
+architecture
+	components
+		Client client
+		Server server
+
+	connectors
+		JSONCtr jsonCtr
+
+	attachments
+		connect client.getInfo and server.sendInfo with jsonCtr
+
+	entryPoints
+		client: start
+
+// Code provided by the programmer
+
+// Common to both Client and Server
+resource type CSIface
+	def getVal(key: String): String
+
+// Client
+resource type ClientIface
+	def start(): Unit
+	...
+
+module def Client(getInfo: CSIface): ClientIface
+	def start(): Unit
+		...
+	...
+
+// Server
+resource type DBConnection	// This would be provided in a library.
+	...
+
+resource type DBModule		// This would be provided in a library.
+	...
+
+module def dbModule(dbCon: DBConnection): DBModule	// This would be provided in a library
+	def connect(): Connection
+		dbCon.connect()
+	...
+
+resource type ServerIface
+	...
+
+module def Server(sendInfoThread: Thread, dbIface: DBModule): ServerIface
+	module def sendInfo(): CSIface
+		def getVal(key: String): String
+			val conn = dbIface.connect()
+			val result = conn.executeSQL(<SQL Query>)
+			conn.close()
+			return result
+
+	def start(): Unit
+		sendInfoThread.getVal = sendInfo().getVal
+		sendInfoThread.start()
+		sendInfoThread.join()
+
+// Generated code for JSONCtr
+1. During typechecking of the connect expression, the types of the requires and provides ports are matched.
+
+2. The metadata associated with the connector specifies the code that must be emitted for facilitating the coordination between the requires and provides ports.
+
+In the above example, the following code will be generated for the getInfo port of the client:
+
+module def getInfo(tcpClient: TCPClientModule): CSIface
+	def getVal(key: String): String
+		tcpClient.connect(host, port)
+		val netStream = tcpClient.getNetworkStream()
+		netStream.write(StringToBytes(serializeToJSON(key)))
+		val returnVal = netStream.read()
+		return bytesToString(returnVal)
+
+The following code will be generated for the server:
+
+resource type Thread		// This will be provided in a library.
+	...
+
+module def sendInfoThread(tcpServer: TCPServerModule): Thread
+	def getVal(key: String): String
+
+	def start(): Unit
+		while (True)
+			Socket s = tcpServer.accept()
+			String key = bytesToString(read(s))
+			write(s, StringToBytes(getVal(deserializeFromJSON(key))))
+
+3. The code for serializing objects to JSON and deserializing objects from JSON would also be generated.
+
+// Generated code for JDBCCtr
+module def dbConnection(dbCon: JDBCConnection): DBConnection
+	def connect(): Connection
+		dbCon.connect(connectionString)		// The connectionString specified in the JDBCCtr is used here.
+
+// Code generated from attachments
+
+// Client
+val tcpClient = <Instantiate TCPClientModule>
+val gi = getInfo(tcpClient)
+val c = client(gi)
+c.start()
+
+// Server
+val jdbcConnection = <Instantiate JDBCConnection module>
+val dbCon = dbConnection(jdbcConnection)
+val dbMod = dbModule(dbCon)
+
+val tcpServer = <Instantiate TCPServerModule>
+val si = sendInfoThread(tcpServer)
+val s = Server(si, dbMod)
+s.start()

@@ -1,0 +1,4 @@
+module def thread(java:Java)
+import java:wyvern.stdlib.support.WyvernThread.wyvernThread
+import java:wyvern.stdlib.support.WyvernThread.t1
+
